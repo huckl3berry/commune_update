@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "pallets/staking",
+    "pallets/governance",
+    "runtime"
+]
+resolver = "2"
+
+[workspace.dependencies]
+frame-support = "4.0.0"
+frame-system = "4.0.0"
+sp-core = "9.0.0"
+sp-runtime = "7.0.0"
+schnorrkel = "0.11.4"

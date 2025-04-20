@@ -1,0 +1,17 @@
+[package]
+name = "pallet-governance"
+version = "4.0.0"
+edition = "2021"
+
+[dependencies]
+frame-support = { workspace = true, default-features = false }
+frame-system = { workspace = true, default-features = false }
+pallet-staking = { path = "../staking", default-features = false }
+
+[features]
+default = ["std"]
+std = [
+    "frame-support/std",
+    "frame-system/std",
+    "pallet-staking/std"
+]

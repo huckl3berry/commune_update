@@ -1,0 +1,23 @@
+[package]
+name = "commune-runtime"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+frame-support = { workspace = true, default-features = false }
+frame-system = { workspace = true, default-features = false }
+pallet-staking = { path = "../pallets/staking", default-features = false }
+pallet-governance = { path = "../pallets/governance", default-features = false }
+sp-core = { workspace = true, features = ["full_crypto"] }
+sp-runtime = { workspace = true, features = ["std"] }
+schnorrkel = { workspace = true }
+
+[features]
+default = ["std"]
+std = [
+    "frame-support/std",
+    "frame-system/std",
+    "pallet-staking/std",
+    "pallet-governance/std",
+    "sp-runtime/std"
+]
